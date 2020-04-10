@@ -1,0 +1,43 @@
+h1{
+animation: type 3s steps(21) ;
+overflow: hidden;
+white-space: nowrap;
+color: blue;
+margin-left: 50%;
+border-bottom: 5px solid blue;
+width: 21ch;
+}
+@keyframes type{
+    0%{
+        width: 0ch;
+          }
+    100%{
+        width: 21ch;
+    }
+}
+/* wavy text */
+.wavy{
+    position: relative;
+    margin-top: 200px;
+    margin-left: 50%;
+}
+.wavy span{
+position: relative;
+display: inline-block;
+font-size:2em;
+text-transform: uppercase;
+animation: animate 1s ease-in-out infinite;
+animation-delay: calc(0.1s * var(--i));
+color: brown;
+/* border-bottom: 5px solid brown; */
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%,100%{
+        transform: translateY(0px);
+    }
